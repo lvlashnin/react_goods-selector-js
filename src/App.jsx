@@ -42,13 +42,13 @@ export const App = () => {
             <tr
               data-cy="Good"
               key={el}
-              className={good === el && 'has-background-success-light'}
+              className={good === el ? 'has-background-success-light' : ''}
             >
               <td>
                 <button
                   data-cy={good === el ? 'RemoveButton' : 'AddButton'}
                   type="button"
-                  className={`button ${good === el && 'is-info'}`}
+                  className={`button ${good === el ? 'is-info' : ''}`}
                   onClick={el === good ? () => setGood('') : () => setGood(el)}
                 >
                   {el === good ? '-' : '+'}
